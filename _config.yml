@@ -45,8 +45,10 @@ nav:
     - { Tags: '/blog/tags/' }
   About:          
     - '/about/'
-  Github Project: 
-    - 'https://martinrioux.github.io/'
+  Test Page:          
+    - '/test_page/'
+  # Github Project: 
+  #   - 'https://martinrioux.github.io/'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
