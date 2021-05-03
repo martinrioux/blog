@@ -38,19 +38,19 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/martinrioux.github.io'
+    - '/'
   Blog:           
-    - '/martinrioux.github.io/blog/'
-    - { Categories: '/martinrioux.github.io/blog/categories/' }
-    - { Tags: '/martinrioux.github.io/blog/tags/' }
+    - '/blog/'
+    - { Categories: '/blog/categories/' }
+    - { Tags: '/blog/tags/' }
   About:          
-    - '/martinrioux.github.io/about/'
+    - '/about/'
   Github Project: 
     - 'https://martinrioux.github.io/'
 
 # Where are tags and categories displayed
-tag_page: '/martinrioux.github.io/blog/tags/'
-category_page: '/martinrioux.github.io/blog/categories/'
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
 
 hero:
   image: /public/img/we_will_be_giants_by_yalestewart.jpg
