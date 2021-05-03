@@ -25,15 +25,15 @@ version: 1.0.0
 # About/contact
 author:
   name: Martin Rioux
-  description: A passionate <strong>developer and researcher</strong>, learning to be a giant.
+  description: Degree in Electrical Engineering and Microbiology make for someone to be interested in a variety of fields.
   gravatar: 8cd5e7684e67af4f7d4156128e2455ce # md5 hash of your email address
   contact:
-    # linkedin:  https://www.linkedin.com/in/lizhihao
     github:    https://github.com/martinrioux
-    # facebook:  <hide>
-    # twitter:   https://twitter.com/Li_Zhihao
-    # weibo:     http://weibo.com/41173780
     email:     martin.rioux2@gmail.com
+    # linkedin:  <hide>
+    # facebook:  <hide>
+    # twitter:   <hide>
+    # weibo:     <hide>
 
 # Navigation (2nd level links supported)
 nav:
@@ -61,5 +61,3 @@ mathjax: true # whether support mathjax
 google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
 disqus_short_name: 'your_short_name' # leave blank if you don't want disqus
 
-
-theme: jekyll-theme-slate
