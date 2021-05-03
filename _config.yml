@@ -52,9 +52,9 @@ nav:
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
-hero:
-  image: /public/img/we_will_be_giants_by_yalestewart.jpg
-  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+home:
+  image: /public/img/home.jpg
+  caption: Welcome in my Live Resume
 
 # Puglins
 mathjax: true # whether support mathjax
