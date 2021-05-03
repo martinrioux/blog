@@ -40,17 +40,17 @@ nav:
   Home:           
     - '/'
   Blog:           
-    - '/blog/'
-    - { Categories: '/blog/categories/' }
-    - { Tags: '/blog/tags/' }
+    - '/martinrioux.github.io/blog/'
+    - { Categories: '/martinrioux.github.io/blog/categories/' }
+    - { Tags: '/martinrioux.github.io/blog/tags/' }
   About:          
-    - '/about/'
+    - '/martinrioux.github.io/about/'
   Github Project: 
     - 'https://martinrioux.github.io/'
 
 # Where are tags and categories displayed
-tag_page: '/blog/tags/'
-category_page: '/blog/categories/'
+tag_page: '/martinrioux.github.io/blog/tags/'
+category_page: '/martinrioux.github.io/blog/categories/'
 
 hero:
   image: /public/img/we_will_be_giants_by_yalestewart.jpg
