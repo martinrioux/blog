@@ -38,7 +38,7 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/'
+    - '/live_resume'
   Blog:           
     - '/blog/'
     - { Categories: '/blog/categories/' }
