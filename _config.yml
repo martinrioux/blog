@@ -2,7 +2,7 @@
 title: Martin Rioux
 tagline: 'My Blog and Live Resume'
 description: 'A blog where I discuss works or projects I am working on, store memo and tips & tricks anf formulate everything in a Live Resume.'
-baseurl: "/live_resume"
+baseurl: "/"
 url: https://martinrioux.github.io
 logo: '/public/logo.png'
 
@@ -25,7 +25,7 @@ version: 1.0.0
 # About/contact
 author:
   name: Martin Rioux
-  description: Degree in Electrical Engineering and Microbiology make for someone to be interested in a variety of fields.
+  description: Degree in Electrical Engineering and Microbiology make for someone interested in a variety of fields.
   gravatar: 8cd5e7684e67af4f7d4156128e2455ce # md5 hash of your email address
   contact:
     github:    https://github.com/martinrioux
@@ -49,8 +49,8 @@ nav:
     - 'https://martinrioux.github.io/live_resume'
 
 # Where are tags and categories displayed
-tag_page: '/live_resume/blog/tags/'
-category_page: '/live_resume/blog/categories/'
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
 
 hero:
   image: /public/img/we_will_be_giants_by_yalestewart.jpg
