@@ -2,7 +2,7 @@
 title: Martin Rioux
 tagline: 'My Blog and Live Resume'
 description: 'A blog where I discuss works or projects I am working on, store memo and tips & tricks anf formulate everything in a Live Resume.'
-baseurl: "/blog"
+baseurl: "/live_resume"
 url: https://martinrioux.github.io
 logo: '/public/logo.png'
 
