@@ -38,7 +38,7 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/live_resume'
+    - '/'
   Blog:           
     - '/blog/'
     - { Categories: '/blog/categories/' }
@@ -46,11 +46,11 @@ nav:
   About:          
     - '/about/'
   Github Project: 
-    - 'http://martinrioux.github.io/'
+    - 'https://martinrioux.github.io/live_resume'
 
 # Where are tags and categories displayed
-tag_page: '/blog/tags/'
-category_page: '/blog/categories/'
+tag_page: '/live_resume/blog/tags/'
+category_page: '/live_resume/blog/categories/'
 
 hero:
   image: /public/img/we_will_be_giants_by_yalestewart.jpg
