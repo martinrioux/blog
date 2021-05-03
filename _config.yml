@@ -38,7 +38,7 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/'
+    - '/martinrioux.github.io'
   Blog:           
     - '/martinrioux.github.io/blog/'
     - { Categories: '/martinrioux.github.io/blog/categories/' }
