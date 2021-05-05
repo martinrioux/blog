@@ -13,59 +13,53 @@
  * Source: http://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
  */
 
-/* Style and "hide" the sidebar */
 .sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 14rem;
-  visibility: hidden;
-  overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem; /* 15px */
-  color: rgba(255,255,255,.6);
-  @include transition(all .3s ease-in-out);
-
-  @if $reverse-layout {
-    left: auto;
-    right: -14rem;
-  } @else {
-    left: -14rem;
-    right: auto;
-  }
-
-  @if $sidebar-color != $default {
-    background-color: $sidebar-color;
-  } @else {
-    background-color: darken($sidebar-color-dark, 10%);
-  }
+  text-align: center;
+  padding: 1rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
+  font-size: 0.7rem;
 }
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .sidebar {
-    font-size: .75rem; /* 14px */
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 15rem;
+    text-align: left;
   }
 }
 
-/* Sidebar content */
+/* Sidebar links */
 .sidebar a {
-  font-weight: normal;
-  color: $white;
+  color: #fff;
+  font-size: 0.8rem;
 }
-.sidebar-item {
-  padding: 1rem;
-}
-.sidebar-item p:last-child {
-  margin-bottom: 0;
+
+/* About section */
+.sidebar-about h1 {
+  color: #fff;
+  margin-top: 0;
+  font-family: "Abril Fatface", serif;
+  font-size: 3.25rem;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  margin-bottom: 1rem;
 }
 .sidebar-nav-item {
   display: block;
   padding: .5rem 1rem;
   border-top: 1px solid rgba(255,255,255,.1);
+}
+.sidebar-nav-item.active,
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: none;
+  background-color: rgba(255,255,255,.1);
+  border-color: transparent;
 }
 .sidebar-nav-item-sub {
   &:before {
@@ -75,17 +69,10 @@
   font-size: 85%;
   line-height: 85%;
 }
-.sidebar-nav-item.active,
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
-  text-decoration: none;
-  background-color: rgba(255,255,255,.1);
-  border-color: transparent;
-}
 
 @media (min-width: 48em) {
   .sidebar-item {
-    padding: 1.5rem;
+    padding: .5rem;
   }
   .sidebar-nav-item {
     padding-left:  1.5rem;
@@ -93,121 +80,17 @@ a.sidebar-nav-item:focus {
   }
 }
 
-/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
-.sidebar-checkbox {
-  position: absolute;
-  opacity: 0;
-  @include prefixer(user-select, none, webkit moz spec);
-}
-
-/* Style the `label` that we use to target the `.sidebar-checkbox` */
-.sidebar-toggle {
-  position: absolute;
-  top:  .8rem;
-  @if $reverse-layout {
-    left: auto;
-    right: 1rem;
-  } @else {
-    left: 1rem;
-    right: auto;
-  }
-  display: block;
-  padding: .25rem .75rem;
-  color: $theme-color;
-  background-color: $white;
-  border-radius: .25rem;
-  cursor: pointer;
-}
-
-.sidebar-toggle:before {
-  display: inline-block;
-  width: 1rem;
-  height: .75rem;
-  content: "";
-  @include background-image(linear-gradient(to bottom, $theme-color-dark, $theme-color-dark 20%, $white 20%, $white 40%, $theme-color-dark 40%, $theme-color-dark 60%, $white 60%, $white 80%, $theme-color-dark 80%, $theme-color-dark 100%));
-}
-
-.sidebar-toggle:active,
-#sidebar-checkbox:focus ~ .sidebar-toggle,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: $white;
-  background-color: $theme-color;
-}
-
-.sidebar-toggle:active:before,
-#sidebar-checkbox:focus ~ .sidebar-toggle:before,
-#sidebar-checkbox:checked ~ .sidebar-toggle:before {
-  @include background-image(linear-gradient(to bottom, $white, $white 20%, $theme-color-dark 20%, $theme-color-dark 40%, $white 40%, $white 60%, $theme-color-dark 60%, $theme-color-dark 80%, $white 80%, $white 100%));
-}
-
-@media (min-width: 30.1em) {
-  .sidebar-toggle {
-    position: fixed;
-  }
-}
-
-@media print {
-  .sidebar-toggle {
-    display: none;
-  }
-}
-
-/* Slide effect
+/* Sticky sidebar
  *
- * Handle the sliding effects of the sidebar and content in one spot, seperate
- * from the default styles.
- *
- * As an a heads up, we don't use `transform: translate3d()` here because when
- * mixed with `position: fixed;` for the sidebar toggle, it creates a new
- * containing block. Put simply, the fixed sidebar toggle behaves like
- * `position: absolute;` when transformed.
- *
- * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
  */
 
-.wrap,
-.sidebar,
-.sidebar-toggle {
-  @include prefixer(backface-visibility, hidden, webkit ms spec);
-}
-.wrap,
-.sidebar-toggle {
-  @include transition(transform .3s ease-in-out);
-}
-
-#sidebar-checkbox:checked + .sidebar {
-  z-index: 10;
-  visibility: visible;
-}
-
-#sidebar-checkbox:checked ~ .wrap {
-  @include transform(translateX(if($overlay-sidebar,0,if($reverse-layout, -14rem, 14rem))));
-}
-
-#sidebar-checkbox:checked ~ .sidebar {
-  @include transform(translateX(if($reverse-layout, -14rem, 14rem)));
-  @if $overlay-sidebar {
-    box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
-    @if $reverse-layout { box-shadow: -.25rem 0 .5rem rgba(0,0,0,.2); }
-  }
-}
-
-#sidebar-checkbox:checked ~ .sidebar-toggle {
-  @include transform(translateX(if($reverse-layout, -14rem, 14rem)));
-  @if $overlay-sidebar {
-    box-shadow: 0 0 0 .25rem $white;
-  }
-}
-
-.sidebar-personal-info {
-  .sidebar-personal-info-section {
-    &:not(:first-of-type) {
-      margin-top: .75rem;
-    }
-    line-height: 1rem;
-    a, strong {
-      color: $white;
-      text-decoration: none;
-    }
+@media (min-width: 48em) {
+  .sidebar-sticky {
+    position: absolute;
+    right:  1rem;
+    bottom: 1rem;
+    left:   1rem;
   }
 }
