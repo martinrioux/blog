@@ -2,12 +2,18 @@
 title: Martin Rioux
 tagline: 'My Blog and Live Resume'
 description: 'A blog where I discuss works or projects I am working on, store memo and tips & tricks anf formulate everything in a Live Resume.'
-baseurl: "/"
+baseurl: ""
 url: https://martinrioux.github.io
 logo: '/public/logo.png'
 
+repository: martinrioux/martinrioux.github.io
 # Site configurations
 gems:
+  - jekyll-github-metadata
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jemoji
   - jekyll-paginate
 markdown: kramdown
 kramdown:
@@ -45,8 +51,8 @@ nav:
     - { Tags: '/blog/tags/' }
   About:          
     - '/about/'
-  Test Page:          
-    - '/test_page/'
+  Project Vault:          
+    - '/project_vault/'
   # Github Project: 
   #   - 'https://martinrioux.github.io/'
 

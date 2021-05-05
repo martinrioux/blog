@@ -7,6 +7,7 @@ $yellow:   #f4bf75;
 $green:    #90a959;
 $cyan:     #75b5aa;
 $blue:     #6a9fb5;
+$my_blue:  #6d9ac4;
 $magenta:  #aa759f;
 $brown:    #8f5536;
 $default:  #505050;
@@ -15,16 +16,16 @@ $white:      #fff;
 $lightgrey:  #eee;
 $black:      #000;
 
-$theme-color: $blue;
+$theme-color: $my_blue;
 $theme-color-dark: darken($theme-color, 10%);
 
 $post-date-color: #9a9a9a;
 $title-color: #313131;
-$masthead-title-small-color: #c0c0c0;
+$masthead-title-small-color: #838383;
 
 /* Layout */
-$reverse-layout: true;
-$overlay-sidebar: false;
+$reverse-layout: false;
+$overlay-sidebar: true;
 
 /* Font stack */
 $font-serif: "PT Serif", Georgia, "Times New Roman", serif;

@@ -1,8 +1,19 @@
 ---
 layout: default
-title: Blog
+title: Live Resume
 ---
 
+<h1>Jump to Category</h1>
+<div class="tags-expo">
+  <div class="tags-expo-list">
+    {% for tag in site.categories %}
+    <a href="tags/#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+
+<h1>Posts</h1>
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
