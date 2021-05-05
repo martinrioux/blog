@@ -1,15 +1,13 @@
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
     <div class="sidebar-personal-info">
       <div class="sidebar-personal-info-section">
-        <a href="http://gravatar.com/{{ site.author.gravatar }}">
-          <img src="http://www.gravatar.com/avatar/{{ site.author.gravatar }}?s=350" title="View on Gravatar" alt="View on Gravatar" />
-        </a>
+        <img src="{{ site.baseurl }}/public/img/home.jpg"/>
       </div>
       <div class="sidebar-personal-info-section">
         <p>{{ site.author.description }}</p>
@@ -18,7 +16,7 @@
       {% assign len = site.author.contact | size %}
       {% assign current_index = 0 %}
       <div class="sidebar-personal-info-section">
-        <p> Follow me: 
+        <p> Contact me: 
         {% for contact in site.author.contact %}
         {% assign iconname = contact[0] %}
         {% if contact[0] == 'email' %}
@@ -67,7 +65,7 @@
 
     {% endfor %}
 
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    <!-- <span class="sidebar-nav-item">Last Update: {{ site.last_update }}</span> -->
   </nav>
 
   <div class="sidebar-item">
@@ -78,7 +76,8 @@
 
   <div class="sidebar-item">
     <p>
-    Powered by <a href="http://jekyllrb.com">jekyll</a> and <a href="http://codinfox.github.io">codinfox-lanyon</a>
+    <!-- V{{ site.version }}<br/> -->
+    Layout thanks to <a href="http://jekyllrb.com">jekyll</a> and <a href="http://codinfox.github.io">codinfox-lanyon</a>
     </p>
   </div>
 </div>

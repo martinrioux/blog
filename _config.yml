@@ -27,6 +27,7 @@ paginate_path: '/blog/page:num'
 permalink: pretty
 
 version: 1.0.0
+last_update: "2021-05-05"
 
 # About/contact
 author:

@@ -34,10 +34,10 @@
     right: auto;
   }
 
-  @if $theme-color != $default {
-    background-color: $theme-color;
+  @if $sidebar-color != $default {
+    background-color: $sidebar-color;
   } @else {
-    background-color: darken($theme-color-dark, 10%);
+    background-color: darken($sidebar-color-dark, 10%);
   }
 }
 @media (min-width: 30em) {

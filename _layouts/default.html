@@ -26,7 +26,8 @@
       </div>
     </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <!-- Uncomment to reenable side bar toggle -->
+    <!-- <label for="sidebar-checkbox" class="sidebar-toggle"></label> -->
 
     <script>
       (function(document) {
@@ -42,7 +43,7 @@
             e.preventDefault();
           } else if (checkbox.checked && !sidebar.contains(target)) {
             /* click outside the sidebar when sidebar is open */
-            checkbox.checked = false;
+            // checkbox.checked = false;
           }
         }, false);
       })(document);

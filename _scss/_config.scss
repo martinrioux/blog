@@ -16,18 +16,23 @@ $white:      #fff;
 $lightgrey:  #eee;
 $black:      #000;
 
-$theme-color: $my_blue;
+$theme-color: #6d9ac4;
 $theme-color-dark: darken($theme-color, 10%);
 
 $post-date-color: #9a9a9a;
 $title-color: #313131;
-$masthead-title-small-color: #838383;
+$masthead-title-small-color: #000000;
 
 /* Layout */
 $reverse-layout: false;
 $overlay-sidebar: true;
+$sidebar-color: #202020;
+$sidebar-color-dark: darken($sidebar-color, 10%);
+
 
 /* Font stack */
 $font-serif: "PT Serif", Georgia, "Times New Roman", serif;
 $font-sans: "PT Sans", Helvetica, Arial, sans-serif;
 $font-font-awesome: FontAwesome;
+
+$hide_on_page_click: true;
