@@ -2,6 +2,7 @@
 layout: post
 title: Home Dashboard
 category: vak
+projects: vak
 tags: [vak, home, iot]
 ---
 

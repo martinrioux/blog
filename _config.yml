@@ -48,18 +48,18 @@ nav:
     - '/'
   Blog:
     - '/blog/'
+    - { Projects: '/blog/projects/' }
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
   About:
     - '/about/'
-  Project Vault:
-    - '/project_vault/'
   # Github Project:
   #   - 'https://martinrioux.github.io/'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
+project_page: '/blog/projects/'
 
 # Puglins
 mathjax: true # whether support mathjax
