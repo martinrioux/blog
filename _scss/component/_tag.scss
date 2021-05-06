@@ -20,6 +20,33 @@
   @include transition(all .1s ease-in-out);
 }
 
+.checked-tag {
+  display: inline-block;
+  background: $theme-color;
+  color: $white;
+  padding: 0 .5rem;
+  margin-right: .5rem;
+  border-radius: 4px;
+  font-family: $font-sans;
+  font-size: 90%;
+  &:before {
+    content: "\f02b";
+    font-family: $font-font-awesome;
+    padding-right: .5em;
+  }
+  @include transition(all .1s ease-in-out);
+}
+
+.project-tag {
+  background: rgba($project-tag-color, 0.15);
+  color: $project-tag-color;
+  &:hover {
+    text-decoration: none;
+    background: $project-tag-color;
+    color: $white;
+  }
+}
+
 .tags-expo {
   :target:before {
     content:"";
@@ -62,4 +89,3 @@
     font-family: $font-sans;
   }
 }
-

@@ -4,25 +4,81 @@ title: Tags
 ---
 
 <div class="tags-expo">
+  Filter by tags
   <div class="tags-expo-list">
     {% for tag in site.tags %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    <a class="post-tag filter-tag" onclick="toggleFilter('{{ tag[0] }}')">{{ tag[0] }}</a>
     {% endfor %}
   </div>
   <hr/>
   <div class="tags-expo-section">
-    {% for tag in site.tags %}
-    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
     <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
+      {% for post in site.posts %}
+      {% capture tag_list %}{% for tag in post.tags %}{{ tag }};{% endfor %}{% endcapture %}
+      <div class="filter-post" value="{{ tag_list }}">
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-      <li>
-        {{ post.title }}
-      <small class="post-date">{{ post.date | date_to_string }}</small>
-      </li>
-      </a>
+          <li>
+            {{ post.title }}
+            <small class="post-date">{{ post.date | date_to_string }}</small>
+            {% if post.category %} |
+            <a href="{{ site.baseurl }}{{ site.category_page }}#{{ post.category | slugify }}" class="post-tag project-tag">{{ post.category }}</a>
+            {% endif %}
+            {% if post.tags %} |
+            {% for tag in post.tags %}
+              <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag filter-tag" onclick="toggleFilter('{{ tag }}')">{{ tag }}</a>
+            {% endfor %}
+            {% endif %}
+        </li>
+        </a>
+      </div>
       {% endfor %}
     </ul>
-    {% endfor %}
   </div>
 </div>
+<script>
+var enabled_tags = {};
+
+function focusTag() {
+  var tags = document.getElementsByClassName("filter-tag");
+  for (var i in tags) {
+    var tag_to_test = tags[i].innerText
+    if (tags[i].classList === undefined) {
+      continue;
+    }
+    if (tag_to_test in enabled_tags) {
+      tags[i].classList.add("checked-tag");
+    } else {
+      tags[i].classList.remove("checked-tag");
+    }
+  }
+}
+
+function hidePosts() {
+  var posts = document.getElementsByClassName("filter-post");
+  for (var i in posts) {
+    var post = posts[i]
+    if (post.attributes === undefined) {
+      continue;
+    }
+    post_tags = post.attributes.value.value.toString().split(';');
+    var filtered_out = false
+    for (tag in enabled_tags) {
+      if (!(post_tags.includes(tag))) {
+        filtered_out = true;
+        break;
+      }
+    }
+    post.hidden = filtered_out;
+  }
+}
+
+function toggleFilter(tag) {
+  if (tag in enabled_tags) {
+    delete enabled_tags[tag]
+  } else {
+    enabled_tags[tag] = ""
+  }
+  focusTag();
+  hidePosts();
+}
+</script>
