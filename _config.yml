@@ -49,7 +49,6 @@ nav:
   Blog:
     - '/blog/'
     - { Projects: '/blog/projects/' }
-    - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
   About:
     - '/about/'
@@ -58,8 +57,7 @@ nav:
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
-category_page: '/blog/categories/'
-project_page: '/blog/projects/'
+category_page: '/blog/projects/'
 
 # Puglins
 mathjax: true # whether support mathjax
