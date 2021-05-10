@@ -74,3 +74,7 @@
 .related-posts li a:hover small {
   color: inherit;
 }
+
+.no-border, .no-border tbody tr td {
+  border: 50px !important;
+}
