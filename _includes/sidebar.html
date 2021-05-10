@@ -9,7 +9,7 @@
         <img src="{{ site.baseurl }}/public/img/home.jpg" height="100px;" style=" margin-left: auto; margin-right: auto;"/>
       </div>
       <div class="sidebar-personal-info-section">
-        <p>{{ site.author.description }}</p>
+        <p style="text-align: justify; text-justify:">{{ site.author.description }}</p>
       </div>
       {% if site.author.contact %}
       {% assign len = site.author.contact | size %}
@@ -69,7 +69,7 @@
     <!-- <span class="sidebar-nav-item">Last Update: {{ site.last_update }}</span> -->
   </nav>
 
-  <div class="sidebar-item">
+  <div class="sidebar-item" style="text-align: justify; text-justify:">
     <p>
     &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. This work is liscensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
     <!-- V{{ site.version }}<br/> -->

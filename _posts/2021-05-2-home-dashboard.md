@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Home Dashboard2
-category: ertert
-tags: [iot, test]
+title: Home Dashboard
+category: vak
+tags: [vak, iot]
 ---
 
 Using the data acquisition platform I mainly developped at work, I made some hardware to generate data and displayed them in Grafana. As for now, a Cheese Fridge, the Meteo and my hrmhrm *Cat Litter Counter* were integrated in the display.

@@ -7,14 +7,14 @@ title: Tags
   Filter by tags
   <div class="tags-expo-list">
     {% for tag in site.tags %}
-    <a class="post-tag filter-tag" onclick="toggleFilter('{{ tag[0] }}')">{{ tag[0] }}</a>
+    <a class="post-tag filter-tag" value="{{ tag[0] | slugify }}" onclick="toggleFilter('{{ tag[0] | slugify }}')">{{ tag[0] }}</a>
     {% endfor %}
   </div>
   <hr/>
   <div class="tags-expo-section">
     <ul class="tags-expo-posts">
       {% for post in site.posts %}
-      {% capture tag_list %}{% for tag in post.tags %}{{ tag }};{% endfor %}{% endcapture %}
+      {% capture tag_list %}{% for tag in post.tags %}{{ tag | slugify}};{% endfor %}{% endcapture %}
       <div class="filter-post" value="{{ tag_list }}">
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
@@ -25,7 +25,7 @@ title: Tags
             {% endif %}
             {% if post.tags %} |
             {% for tag in post.tags %}
-              <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag filter-tag" onclick="toggleFilter('{{ tag }}')">{{ tag }}</a>
+              <a value="{{ tag | slugify }}" class="post-tag filter-tag" onclick="toggleFilter('{{ tag | slugify }}')">{{ tag }}</a>
             {% endfor %}
             {% endif %}
         </li>
@@ -41,14 +41,24 @@ var enabled_tags = {};
 function focusTag() {
   var tags = document.getElementsByClassName("filter-tag");
   for (var i in tags) {
-    var tag_to_test = tags[i].innerText
-    if (tags[i].classList === undefined) {
+    if (tags[i].attributes === undefined || tags[i].attributes.value === undefined || tags[i].classList === undefined) {
       continue;
     }
-    if (tag_to_test in enabled_tags) {
+
+    var tag_to_test = tags[i].attributes.value.value;
+
+    if (!(tag_to_test in enabled_tags)) {
+      enabled_tags[tag_to_test] = "no_filter"
+    }
+    if (enabled_tags[tag_to_test] == "filter_in") {
       tags[i].classList.add("checked-tag");
+      tags[i].classList.remove("striked-tag");
+    } else if (enabled_tags[tag_to_test] == "filter_out") {
+      tags[i].classList.remove("checked-tag");
+      tags[i].classList.add("striked-tag");
     } else {
       tags[i].classList.remove("checked-tag");
+      tags[i].classList.remove("striked-tag");
     }
   }
 }
@@ -63,9 +73,16 @@ function hidePosts() {
     post_tags = post.attributes.value.value.toString().split(';');
     var filtered_out = false
     for (tag in enabled_tags) {
-      if (!(post_tags.includes(tag))) {
-        filtered_out = true;
-        break;
+      if (enabled_tags[tag] == "filter_in") {
+        if (!(post_tags.includes(tag))) {
+          filtered_out = true;
+          break;
+        }
+      } else if (enabled_tags[tag] == "filter_out") {
+        if ((post_tags.includes(tag))) {
+          filtered_out = true;
+          break;
+        }
       }
     }
     post.hidden = filtered_out;
@@ -73,12 +90,35 @@ function hidePosts() {
 }
 
 function toggleFilter(tag) {
-  if (tag in enabled_tags) {
-    delete enabled_tags[tag]
-  } else {
-    enabled_tags[tag] = ""
+  if (!(tag in enabled_tags)) {
+    enabled_tags[tag] = "no_filter"
   }
+  if (enabled_tags[tag] == "filter_in") {
+    enabled_tags[tag] = "filter_out"
+  } else if (enabled_tags[tag] == "filter_out") {
+    enabled_tags[tag] = "no_filter"
+  } else {
+    enabled_tags[tag] = "filter_in"
+  }
+
   focusTag();
   hidePosts();
+}
+
+var queryString = window.location.href
+if (queryString.split('#')[1] !== undefined) {
+  queryString = queryString.split('#')[1];
+  var tags = document.getElementsByClassName("filter-tag");
+  for (var i in tags) {
+    if (tags[i].attributes === undefined || tags[i].attributes.value === undefined || tags[i].classList === undefined) {
+      continue;
+    }
+    var tag_to_test = tags[i].attributes.value.value;
+    if (tag_to_test ==  queryString) {
+      enabled_tags[queryString] = "filter_in"
+      focusTag();
+      hidePosts();
+    }
+  }
 }
 </script>

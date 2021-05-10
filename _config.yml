@@ -52,6 +52,8 @@ nav:
     - { Tags: '/blog/tags/' }
   About:
     - '/about/'
+  About:
+    - '/about_fullpage/'
   # Github Project:
   #   - 'https://martinrioux.github.io/'
 
