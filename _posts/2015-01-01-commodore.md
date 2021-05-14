@@ -2,7 +2,7 @@
 layout: post
 title: Commodore 64 Emulation Station
 category: Commodore
-tags: [hardware, gaming]
+tags: [Hardware, Game]
 ---
 I bought a broken Commodore 64 with the objective of converting it in an emulation station. I absolutely wanted the keyboard to be as authentic as possible, so I started with the project [tmk_keyboard](https://github.com/tmk/tmk_keyboard) using a teensy and made the mapping for the Commodore layout. Finally, It can now be used in any computer as a generic USB keyboard, and the key mapping is really close to the original but yet fully functional with the help of multi-layer mapping.
 

@@ -7,7 +7,7 @@ title: About
         <div class="profile-container">
             <img class="profile" src="/public/img/me.jpg" alt="" />
             <h1 class="name">Martin Rioux</h1>
-            <h3 class="tagline">E. Eng. - Embedded System Developer with Full Stack Proficiencies</h3>
+            <h3 class="tagline">Electrical Eng. - Embedded System Developer with Full Stack Proficiencies</h3>
         </div><!--//profile-container-->
         <div class="contact-container container-block">
             <ul class="list-unstyled contact-list">
@@ -45,6 +45,7 @@ title: About
                 <li>Thinkering</li>
                 <li>Hiking</li>
                 <li>Cooking and Baking</li>
+                <li>Passionate about electromechanical systems</li>
             </ul>
         </div><!--//interests-->
         <div class="container-block">
@@ -152,83 +153,51 @@ title: About
         <section class="skills-section section">
             <h2 class="section-title"><span class="icon-holder"><i class="resume-fas fa fa-rocket"></i></span>Skills &amp; Proficiency</h2>
             <div class="skillset">
+                <div class="qualification-level">Expert in</div>
                 <div class="item">
-                    <span class="project-tagline">Good programming skills (Python, C / C ++, C #, Bash, Ruby)</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 90%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <span class="project-tagline">Programming skills (Python, Bash)</span>
                 </div>
                 <div class="item">
-                    <span class="project-tagline">Proficient in the Linux operating system (including server)</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 90%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <span class="project-tagline">Linux operating system (including server)</span>
                 </div>
                 <div class="item">
                     <span class="project-tagline">Electronic system design, from the hardware to the software</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
                 </div>
                 <div class="item">
                     <span class="project-tagline">Desing and creation of Data Acquisition Platform</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 95%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
                 </div>
                 <div class="item">
-                    <span class="project-tagline">Well versed in Reactive Web UI design using modern tools</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 80%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <span class="project-tagline">Brainstorming and problem solving</span>
                 </div>
                 <div class="item">
-                    <span class="project-tagline">Database design and work with SQL databases</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 75%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="project-tagline">Experienced in brainstorming sessions</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 85%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="project-tagline">Ease in team working and sharing knowledge</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 85%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="project-tagline">Some 3d modeling skills (Solidworks, Blender)</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 70%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="item">
-                    <span class="project-tagline">Auditor for the ISO 9001: 2008 standard</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 50%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <span class="project-tagline">Autodidact and autonomous</span>
                 </div>
                 <div class="item">
                     <span class="project-tagline">Proactive and always looking for what can be improved</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 90%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
                 </div>
                 <div class="item">
-                    <span class="project-tagline">Particularly good autodidact and autonomous</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 95%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <span class="project-tagline">Team Working and knowledge sharing</span>
+                </div>
+                <div class="qualification-level">Proficient in</div>
+                <div class="item">
+                    <span class="project-tagline">Programming skills (C)</span>
                 </div>
                 <div class="item">
-                    <span class="project-tagline">Passionate about electromechanical systems</span>
-                    <div class="progress level-bar">
-                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <span class="project-tagline">Reactive Web UI design using modern tools</span>
+                </div>
+                <div class="item">
+                    <span class="project-tagline">Database design and work with SQL databases</span>
+                </div>
+                <div class="qualification-level">Advanced in</div>
+                <div class="item">
+                    <span class="project-tagline">Programming skills (C++, C#, Ruby)</span>
+                </div>
+                <div class="qualification-level">Some skills in</div>
+                <div class="item">
+                    <span class="project-tagline">3d modeling skills (Solidworks, Blender)</span>
+                </div>
+                <div class="item">
+                    <span class="project-tagline">Auditor for the ISO 9001: 2008 standard</span>
                 </div>
             </div>
         </section><!--//skills-section-->

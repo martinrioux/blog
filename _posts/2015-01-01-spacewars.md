@@ -1,19 +1,27 @@
 ---
 layout: post
-title: Zatacka
+title: Spacewars
 category: Games
-tags: [python, games]
+tags: [Python, Game]
 ---
-Here is a clone of the game Zatacka, made with Panda3D.
-This game allow up to 25 people to play at the same time using custom controller and was meant to be used at the Quebec Engineering Games. Even though the game was finished, it wasn't used due to a lack of resources. In fact, it was replaced by game in the RGB_speed_game folder of this repo. Though it is not in the final version, it is possible to control the game using an Arduino.
-**About Panda3D**: Panda3D is an open source C++ game engine with python binding. There are no visual editors for this game engine.
 
-The code is avaible in my repository my repository [Zatacka-Panda3D](https://github.com/martinrioux/Zatacka-Panda3D).
+This is the first game I ever completed. I really enjoyed making it since it made me learn so much about how games are made, new approach to certain problems, objects management, OpenGL and much more.
+
+[![spacewar_4](/public/img/games/spacewar/spacewar_4.png)](/public/img/games/spacewar/spacewar_4.png)
+<!-- more -->
+
+It is based on the game Spacewar (the version released in 1985), a fun game I used to play on a Compaq Portable III with my brothers.
+It is a 1 vs 1 game where you have to destroy the opponent. Your ship is equipped with laser, missiles, cloak, energy shield, a random teleportation device and the ability to convert your energy from and to the hull integrity.
+
+The ‘’combat zone’’, which is looping back when you go through the side, can include asteroid and/or a central planet. The asteroids move around the map, hurt the players on contact and can be destroy if you shoot at them enough. The planet sits in the middle of the map and while they don’t hurt the players on contact, their gravity affect most objects in the game (player, bullet, asteroids). If a player gets stuck to the surface of the planet, it is hard to get away and the player becomes an easy target.
+
+**About Panda3D**: Panda3D is an open source C++ game engine with python binding. Super nice community!
+
+The code is avaible in my repository my repository [Panda3D-Space-Wars](https://github.com/martinrioux/Panda3D-Space-Wars).
 {: .text-justify}
 
+Here a some screenshots:
 
-<center>Screenshots</center>
-![menu](/public/img/games/spacewar/zatacka/menu.png)
-![game_1](/public/img/games/spacewar/zatacka/game1.png)
-![game_2](/public/img/games/spacewar/zatacka/game2.png)
-![game_3](/public/img/games/spacewar/zatacka/game3.png)
+| [![spacewar_1](/public/img/games/spacewar/spacewar_1.png)](/public/img/games/spacewar/spacewar_1.png) | [![spacewar_2](/public/img/games/spacewar/spacewar_2.png)](/public/img/games/spacewar/spacewar_2.png) |
+| [![spacewar_3](/public/img/games/spacewar/spacewar_3.png)](/public/img/games/spacewar/spacewar_3.png) | |
+{: .no-border}

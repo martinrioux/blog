@@ -75,6 +75,14 @@
   color: inherit;
 }
 
-.no-border, .no-border tbody tr td {
+.no-border, .no-border tbody tr td, .no-border thead tr th {
   border: 50px !important;
+  table-layout: fixed;
+  width: 100%;
+  background-color: transparent;
+}
+
+.small {
+  width: 50%;
+  margin: auto;
 }
