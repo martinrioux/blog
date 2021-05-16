@@ -28,12 +28,12 @@
 }
 
 .main-wrapper a {
-  color: #2d7788;
+  color: $theme-color;
 }
 
 .main-wrapper a:hover {
   text-decoration: underline;
-  color: #1a454f;
+  color: $theme-color;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -54,7 +54,7 @@
 }
 
 .resume-wrapper {
-  background: #42A8C0;
+  background: $theme-color;
   max-width: 960px;
   margin: 0 auto;
   margin-top: 30px;
@@ -65,7 +65,7 @@
 }
 
 .sidebar-wrapper {
-  background: #42A8C0;
+  background: $theme-color;
   position: absolute;
   right: 0;
   width: 240px;
@@ -107,13 +107,14 @@
 
 .list-unstyled{
   list-style-type: none;
+  padding-left: 0.5rem;
 }
 
 .fa-list{
   margin-right: 5px;
 }
 .contact-list {
-  padding-left: 0px;
+  padding-left: 0.5rem;
 }
 
 .sidebar-wrapper .contact-list .svg-inline--fa {
@@ -135,7 +136,7 @@
 }
 
 .sidebar-wrapper .container-block {
-  padding: 15px;
+  padding: 12px;
 }
 
 .sidebar-wrapper .container-block-title {
@@ -154,6 +155,7 @@
 
 .sidebar-wrapper .education-container .item {
   margin-bottom: 15px;
+  padding-left: 0.5rem;
 }
 
 .sidebar-wrapper .education-container .item:last-child {
@@ -212,7 +214,7 @@
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 500;
-  color: #2d7788;
+  color: $theme-color;
   position: relative;
   margin-top: 0;
   margin-bottom: 20px;
@@ -232,7 +234,7 @@
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background: #2d7788;
+  background: $theme-color;
   text-align: center;
   font-size: 16px;
   position: relative;
@@ -251,7 +253,7 @@
 .qualification-level {
   font-style: italic;
   margin-right: 8px;
-  color: rgb(26, 69, 79);
+  color: $theme-color
 }
 
 .main-wrapper .experiences-section .item {
@@ -276,12 +278,12 @@
   position: absolute;
   right: 0;
   top: 0;
-  color: #1a454f;
+  color: $theme-color;
 }
 
 .main-wrapper .company {
   margin-bottom: 10px;
-  color: #1a454f;
+  color: $theme-color;
 }
 
 .main-wrapper .project-title {

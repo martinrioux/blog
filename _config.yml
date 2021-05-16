@@ -52,6 +52,8 @@ nav:
     - { Tags: '/blog/tags/' }
   About:
     - '/about/'
+  À Propos:
+    - '/a_propos/'
   # Github Project:
   #   - 'https://martinrioux.github.io/'
 

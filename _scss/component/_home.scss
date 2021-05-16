@@ -38,6 +38,17 @@
   object-fit: cover;
 }
 
+.contain {
+  overflow: hidden;
+  object-fit: contain;
+}
+
+.contain img {
+  height: 7rem;
+  overflow: hidden;
+  object-fit: contain;
+}
+
 .scrollable div pre {
   overflow: scroll;
   max-height: 35rem;

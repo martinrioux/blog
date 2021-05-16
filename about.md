@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title:
 ---
 <div class="resume-wrapper">
     <div class="sidebar-wrapper">
@@ -58,11 +58,13 @@ title: About
             </ul>
         </div><!--//Implications-->
         <div class="container-block">
-            <h2 class="container-block-title">Awards</h2>
+            <h2 class="container-block-title">Awards & distinctions</h2>
             <ul class="list-unstyled interests-list">
                 <li>Earned a place on the Dean's Honour Roll (Graduates of 2019)</li>
+                <li>Recipient of the LGT's academic excellence award in 2019</li>
+                <li>Recipient of the Jacques Dionne's excellence award in 2018</li>
                 <li>1rst place at the QEC (Quebec Engineering Competition) 2018</li>
-                <li>Recipient of the academic excellence award by the "LGT Engineering Group" 2017</li>
+                <li>Recipient of the LGT's academic excellence award in 2017</li>
                 <li>2nd place at the QEC 2017 in Junior Conception</li>
                 <li>2nd place at the CEC (Canadian Engineering Competition) 2017 in Junior Conception</li>
                 <li>Recipient of the "Technical Excellence" award at the QEC 2015</li>
@@ -155,7 +157,7 @@ title: About
             <div class="skillset">
                 <div class="qualification-level">Expert in</div>
                 <div class="item">
-                    <span class="project-tagline">Programming skills (Python, Bash)</span>
+                    <span class="project-tagline">Programming skills: Python, Bash and C/C++ for MCU</span>
                 </div>
                 <div class="item">
                     <span class="project-tagline">Linux operating system (including server)</span>
@@ -180,7 +182,7 @@ title: About
                 </div>
                 <div class="qualification-level">Proficient in</div>
                 <div class="item">
-                    <span class="project-tagline">Programming skills (C)</span>
+                    <span class="project-tagline">Programming skills: C</span>
                 </div>
                 <div class="item">
                     <span class="project-tagline">Reactive Web UI design using modern tools</span>
@@ -190,11 +192,14 @@ title: About
                 </div>
                 <div class="qualification-level">Advanced in</div>
                 <div class="item">
-                    <span class="project-tagline">Programming skills (C++, C#, Ruby)</span>
+                    <span class="project-tagline">Programming skills: C++, C# and Ruby</span>
+                </div>
+                <div class="item">
+                    <span class="project-tagline">PCB Design using EDA softwares: Altium and KiCAD</span>
                 </div>
                 <div class="qualification-level">Some skills in</div>
                 <div class="item">
-                    <span class="project-tagline">3d modeling skills (Solidworks, Blender)</span>
+                    <span class="project-tagline">3d modeling skills: Solidworks</span>
                 </div>
                 <div class="item">
                     <span class="project-tagline">Auditor for the ISO 9001: 2008 standard</span>
