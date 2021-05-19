@@ -4,9 +4,8 @@ title: Configurating Grafana on Docker
 category: Tips & Tricks
 tags: [Grafana, Tips & Tricks, Docker]
 ---
-The Docker version of Grafana doesn't have a lot of information about the custom configurations.
-Most of these are made through the environment variable, but I wasn't able to find a list anywhere.
-Here is some info to help you getting started!
+The Docker version of Grafana doesn't have a lot of information about the custom configurations usually found in the `grafana.ini` config file. Editing or replacing the `/etc/grafana/grafana.ini` file inside the docker is finicky and not the proper way since Grafana specifies it should be made through the environment variables. Alas, I wasn't able to find a list anywhere of all the options.
+Turns out there is a logic to it!
 
 | ![docker](/public/img/generic/docker.png) | ![grafana](/public/img/generic/grafana.png) |
 {: .no-border .small}
