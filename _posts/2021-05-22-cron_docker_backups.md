@@ -135,7 +135,7 @@ We now have handy scripts to backup and restore a volume, but manually executing
 Usually include in most (if not all) major Linux distributions, cron allows the user to execute a script according [to a schedule](https://en.wikipedia.org/wiki/Cron).
 
 In our case, lets say we want to backup the volumes et 2 am every day.
-To enter a new cron job, execute `cron -e`.
+To enter a new cron job, execute `crontab -e`.
 
 Append this to the file:
 (Do not forget to change the path to where your backup.sh script is located.)
