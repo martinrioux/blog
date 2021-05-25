@@ -152,7 +152,7 @@ To restore, cd into your docker-compose project and execute
 ./restore.sh <volume_to_restore> <restore_file>
 ```
 
-Do not forget to set the PROJECT_NAME in the restore.sh if you specify the COMPOSE_PROJECT_NAME.
+Do not forget to set the PROJECT_NAME in the restore.sh if you specified the COMPOSE_PROJECT_NAME.
 
 When you want to restore to a new instance, start the docker-compose (up), bring it back down, restore the volume and start everyting back again.
 
