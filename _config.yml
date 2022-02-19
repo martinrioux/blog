@@ -50,6 +50,7 @@ nav:
     - '/blog/'
     - { Projects: '/blog/projects/' }
     - { Tags: '/blog/tags/' }
+    - { Linux Cheatsheet: '/blog/linux_cheatsheet/' }
   About:
     - '/about/'
   À Propos:
